@@ -23,15 +23,15 @@ variable "lambda_function" {
 }
 
 variable "lambda_role" {
-  default = "test-api-role-devops-poc"
+  default = "test-api-role-devops-role"
 }
 
 variable "lambda_policy" {
-  default = "test-api-policy-devops-poc"
+  default = "test-api-policy-devops-policy"
 }
 
 variable "lambda_handler" {
-  default = "companyinfoAPI::companyinfoAPI.LambdaEntryPoint::FunctionHandlerAsync"
+  default = "test-api::testAPI.LambdaEntryPoint::FunctionHandlerAsync"
 }
 
 variable "lob" {
@@ -40,6 +40,10 @@ variable "lob" {
 
 variable "systemNumber" {
   default = "1123"
+}
+
+variable "lambda_source" {
+  default = "publish/test-api.zip"
 }
 
 variable "lambda_runtime" {
