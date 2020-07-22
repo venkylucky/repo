@@ -31,7 +31,7 @@ variable "lambda_policy" {
 }
 
 variable "lambda_handler" {
-  default = "test-api::testAPI.LambdaEntryPoint::FunctionHandlerAsync"
+  default = "Node_js_Hello_World::testAPI.LambdaEntryPoint::FunctionHandlerAsync"
 }
 
 variable "lob" {
