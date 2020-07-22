@@ -43,7 +43,7 @@ variable "systemNumber" {
 }
 
 variable "lambda_source" {
-  default = "./HelloWorld.zip"
+  default = "Lambda/HelloWorld.zip"
 }
 
 variable "lambda_runtime" {
