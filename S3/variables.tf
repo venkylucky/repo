@@ -4,7 +4,7 @@ variable "region" {
 
 
 variable "accountId" {
-	default = ""
+	default = "759442462106"
 }
 
 variable "env" {
