@@ -43,7 +43,7 @@ variable "systemNumber" {
 }
 
 variable "lambda_source" {
-  default = "publish/test-api.zip"
+  default = "kaiburr-test1/HelloWorld.zip"
 }
 
 variable "lambda_runtime" {
