@@ -30,7 +30,7 @@ EOF
 }
 
 resource "aws_lambda_function" "lambda_function" {
-  #filename      = var.lambda_source
+  filename      = var.lambda_source
   function_name = var.lambda_function
   role          = aws_iam_role.lambda_role.arn
   handler       = var.lambda_handler
