@@ -6,6 +6,10 @@ variable "env" {
   default = "dev"
 }
 
+variable "accountId" {
+	default = "759442462106"
+}
+
 variable "project" {
   default = "fbi-test-app-poc"
 }
