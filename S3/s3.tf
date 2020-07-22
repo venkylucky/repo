@@ -1,12 +1,12 @@
 provider "aws" {
-   region = "us-east-1"
+   region = "us-east-2"
    assume_role {
 	role_arn = "arn:aws:iam::759442462106:role/terraform-test-role"
 }
 }
 
 resource "aws_s3_bucket" "s3bucket" {
-  bucket = "test-s3-bucket"
+  bucket = "kaiburr-test2"
   acl    = "private"
 
   tags = {
