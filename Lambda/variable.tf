@@ -30,10 +30,6 @@ variable "lambda_policy" {
   default = "test-api-policy-devops-policy"
 }
 
-variable "lambda_handler" {
-  default = "Node_js_Hello_World::testAPI.LambdaEntryPoint::FunctionHandlerAsync"
-}
-
 variable "lob" {
   default = "apsec"
 }
