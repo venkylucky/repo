@@ -42,10 +42,6 @@ variable "systemNumber" {
   default = "1123"
 }
 
-variable "lambda_source" {
-  default = "test"
-}
-
 variable "lambda_runtime" {
   default = "dotnetcore2.1"
 }
