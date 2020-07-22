@@ -43,11 +43,11 @@ variable "systemNumber" {
 }
 
 variable "lambda_source" {
-  default = "Lambda/HelloWorld.zip"
+  default = "Lambda/Node_js_Hello_World.zip"
 }
 
 variable "lambda_runtime" {
-  default = "dotnetcore2.1"
+  default = "nodejs12.x"
 }
 
 variable "owner1" {
