@@ -31,7 +31,8 @@ variable "lambda_policy" {
 }
 
 variable "lambda_handler" {
-  default = "index.handler"}
+  default = "index.handler"
+}
 
 variable "lob" {
   default = "apsec"
@@ -42,7 +43,7 @@ variable "systemNumber" {
 }
 
 variable "lambda_source" {
-  default = "Lambda/NF.zip"
+  default = "HelloWorld.zip"
 }
 
 variable "lambda_runtime" {
