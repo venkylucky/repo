@@ -42,10 +42,6 @@ variable "systemNumber" {
   default = "1123"
 }
 
-variable "lambda_source" {
-  default = "HelloWorld.zip"
-}
-
 variable "lambda_runtime" {
   default = "nodejs12.x"
 }
