@@ -30,6 +30,9 @@ variable "lambda_policy" {
   default = "test-api-policy-devops-policy"
 }
 
+variable "lambda_handler" {
+  default = "index.handler"}
+
 variable "lob" {
   default = "apsec"
 }
@@ -39,7 +42,7 @@ variable "systemNumber" {
 }
 
 variable "lambda_source" {
-  default = "Lambda/Node_js_Hello_World.zip"
+  default = "Lambda/NF.zip"
 }
 
 variable "lambda_runtime" {

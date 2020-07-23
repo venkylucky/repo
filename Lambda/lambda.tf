@@ -34,6 +34,7 @@ resource "aws_lambda_function" "lambda_function" {
   function_name = var.lambda_function
   role          = aws_iam_role.lambda_role.arn
   runtime       = var.lambda_runtime
+  handler       = var.lambda_handler
   timeout       = 20
   depends_on    = [aws_iam_role_policy_attachment.lambda_logs, aws_cloudwatch_log_group.log_group]
 
