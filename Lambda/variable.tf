@@ -14,9 +14,9 @@ variable "project" {
   default = "fbi-test-app-poc"
 }
 
-variable "rest_api" {
-  default = "test-api"
-}
+#variable "rest_api" {
+#  default = "test-api"
+#}
 
 variable "lambda_function" {
   default = "test-api-function-devops-poc"

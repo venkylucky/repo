@@ -3,7 +3,7 @@ provider "aws" {
    #assume_role {
 	#role_arn = "arn:aws:iam::759442462106:role/terraform-test-role"
 #}
-   shared_credentials_file = "%USERPROFILE%\.aws\credentials"
+   shared_credentials_file = "$HOME/.aws/credentials"
    }
 
 terraform{
