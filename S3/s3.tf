@@ -1,11 +1,4 @@
-provider "aws" {
-   region = "us-east-2"
-   #shared_credentials_file = "$HOME/.aws/credentials"
-   #profile                 = "default"
-   assume_role {
-   	role_arn = "arn:aws:iam::759442462106:role/terraform-test-role"
-}
-}
+provider "aws" {}
 
 resource "aws_s3_bucket" "s3bucket" {
   bucket = "kaiburr-test3"
