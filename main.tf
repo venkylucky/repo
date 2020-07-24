@@ -4,6 +4,7 @@ provider "aws" {
 	#role_arn = "arn:aws:iam::759442462106:role/terraform-test-role"
 #}
    shared_credentials_file = "$HOME/.aws/credentials"
+   profile                 = "default"
    }
 
 terraform{
