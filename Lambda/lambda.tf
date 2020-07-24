@@ -31,7 +31,7 @@ resource "aws_lambda_function" "lambda_function" {
   runtime       = var.lambda_runtime
   handler       = var.lambda_handler
   timeout       = 20
-  depends_on    = [aws_iam_role_policy_attachment.lambda_logs, aws_cloudwatch_log_group.log_group]
+  depends_on    = [aws_cloudwatch_log_group.log_group]
 
   environment {
     variables = {
@@ -42,46 +42,5 @@ resource "aws_lambda_function" "lambda_function" {
 resource "aws_cloudwatch_log_group" "log_group" {
   name              = "/aws/lambda/${var.lambda_function}"
   retention_in_days = 14
-}
-
-resource "aws_iam_policy" "lambda_policy" {
-  name = var.lambda_policy
-  path = "/"
-
-  policy = <<EOF
-{
-  "Version": "2012-10-17",
-  "Statement": [
-    {
-      "Action": [
-        "dynamodb:BatchGetItem",
-        "dynamodb:GetItem",
-        "dynamodb:Query",
-        "dynamodb:Scan",
-        "dynamodb:BatchWriteItem",
-        "dynamodb:PutItem",
-        "dynamodb:UpdateItem",
-        "dynamodb:DescribeTable"
-      ],
-      "Resource": "arn:aws:dynamodb:*:*:table/*",
-      "Effect": "Allow"
-		},
-    {
-      "Action": [
-        "logs:CreateLogGroup",
-        "logs:CreateLogStream",
-        "logs:PutLogEvents"
-      ],
-      "Resource": "arn:aws:logs:*:*:*",
-      "Effect": "Allow"
-    }
-  ]
-}
-EOF
-}
-
-resource "aws_iam_role_policy_attachment" "lambda_logs" {
-  role = aws_iam_role.lambda_role.name
-  policy_arn = aws_iam_policy.lambda_policy.arn
 }
 
