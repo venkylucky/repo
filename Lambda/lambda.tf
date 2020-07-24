@@ -9,6 +9,7 @@ resource "aws_lambda_function" "lambda_function" {
   function_name = var.lambda_function
   runtime       = var.lambda_runtime
   handler       = var.lambda_handler
+  role          = "arn:aws:iam::759442462106:role/service-role/DeployToLambda-role-f6vf89o6"
   timeout       = 20
   depends_on    = [aws_cloudwatch_log_group.log_group]
 
