@@ -46,15 +46,6 @@ resource "aws_lambda_function" "lambda_function" {
     }
   }
 }
-
-/* resource "aws_lambda_permission" "gateway" {
-  statement_id  = "AllowAPIGatewayInvoke"
-  action        = "lambda:InvokeFunction"
-  function_name = aws_lambda_function.lambda_function.function_name
-  principal     = "apigateway.amazonaws.com"
-  source_arn    = "${aws_api_gateway_rest_api.rest_api.execution_arn}/*/*"
-} */
-
 resource "aws_cloudwatch_log_group" "log_group" {
   name              = "/aws/lambda/${var.lambda_function}"
   retention_in_days = 14
