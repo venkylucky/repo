@@ -1,8 +1,9 @@
 provider "aws" {
    region = "us-east-2"
-   assume_role {
-	role_arn = "arn:aws:iam::759442462106:role/terraform-test-role"
-}
+   shared_credentials_file = "%USERPROFILE%\.aws\credentials"
+   #assume_role {
+   #	role_arn = "arn:aws:iam::759442462106:role/terraform-test-role"
+#}
 }
 
 resource "aws_s3_bucket" "s3bucket" {
