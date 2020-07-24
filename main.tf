@@ -1,18 +1,19 @@
 provider "aws" {
    region = "us-east-2"
-   #assume_role {
-	#role_arn = "arn:aws:iam::759442462106:role/terraform-test-role"
-#}
-   shared_credentials_file = "$HOME/.aws/credentials"
-   profile                 = "default"
-   }
+   assume_role {
+	role_arn = "arn:aws:iam::759442462106:role/terraform-test-role"
+}
+}
+   #shared_credentials_file = "$HOME/.aws/credentials"
+   #profile                 = "default"
+   #}
 
 terraform{
   backend "s3" {
 	bucket = "kaiburr-test1"
 	key    = "statefile/terraform.tfstate"
 	region = "us-east-2"
-	#role_arn = "arn:aws:iam::759442462106:role/terraform-test-role"
+	role_arn = "arn:aws:iam::759442462106:role/terraform-test-role"
      }
 }
 

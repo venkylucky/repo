@@ -1,11 +1,11 @@
 provider "aws" {
     region = "us-east-2"
-    shared_credentials_file = "$HOME/.aws/credentials"
-    profile                 = "default"
+    #shared_credentials_file = "$HOME/.aws/credentials"
+    #profile                 = "default"
     
-    #assume_role {
-    #  role_arn = "arn:aws:iam::759442462106:role/terraform-test-role"
-    #}
+    assume_role {
+      role_arn = "arn:aws:iam::759442462106:role/terraform-test-role"
+    }
 }
 
 data "aws_caller_identity" "current" {
