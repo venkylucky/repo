@@ -12,7 +12,3 @@ terraform{
 module "s3" {
  source = "./S3"
 }
-
-module "lambda" {
- source = "./Lambda"
-}
