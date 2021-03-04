@@ -1,7 +1,7 @@
 provider "aws" {}
 
 resource "aws_s3_bucket" "s3bucket" {
-  bucket = "kaiburr-test3"
+  bucket = "kaiburr-test4"
   acl    = "private"
 
   tags = {
